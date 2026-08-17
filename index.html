@@ -133,6 +133,7 @@
   .links .link:nth-child(4) { animation-delay: 1.0s; }
   .links .link:nth-child(5) { animation-delay: 1.1s; }
   .links .link:nth-child(6) { animation-delay: 1.2s; }
+  .links .link:nth-child(7) { animation-delay: 1.3s; }
 
   .link:hover,
   .link:focus-visible {
@@ -191,7 +192,7 @@
     letter-spacing: 0.04em;
     color: var(--text-muted);
     text-align: center;
-    animation: riseInDim 0.5s ease-out 1.35s both;
+    animation: riseInDim 0.5s ease-out 1.45s both;
   }
 
   @keyframes flashOut {
@@ -285,6 +286,13 @@
         <span class="handle">Pingumms</span>
         <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
       </a>
+
+      <a class="link" href="https://www.linkedin.com/in/henrique-juliano-araldi-463901201/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><circle cx="12" cy="9.3" r="2.3"/><path d="M8 17c1-2.3 2.5-3.4 4-3.4s3 1.1 4 3.4"/></svg>
+        <span class="label">LinkedIn</span>
+        <span class="handle">Henrique Juliano Araldi</span>
+        <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+      </a>
     </nav>
 
     <footer>HENRIQUEJULIANOARALDI</footer>
@@ -328,7 +336,6 @@
         }));
       }
 
-      // campo de fluxo: ângulo em cada ponto, combinando senoides em escalas diferentes
       function flowAngle(x, y, t) {
         const s1 = Math.sin(x * 0.0021 + t * 0.55) + Math.cos(y * 0.0026 - t * 0.4);
         const s2 = Math.sin((x + y) * 0.0014 - t * 0.3);
@@ -339,7 +346,6 @@
       function step() {
         time += 0.9;
 
-        // desenha um retângulo semitransparente por cima do frame anterior -> gera o rastro
         ctx.fillStyle = "rgba(11,12,14,0.04)";
         ctx.fillRect(0, 0, width, height);
 
